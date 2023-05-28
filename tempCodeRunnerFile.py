@@ -1,13 +1,23 @@
-vel_carro_pass_radar_1 = velocidade > RADAR_1
-carro_passou_radar_1 = local_carro >= (LOCAL_1 - RADAR_RANGE) and \
-    local_carro <= (LOCAL_1 + RADAR_RANGE)
-carro_multado_radar_1 = carro_passou_radar_1 and vel_carro_pass_radar_1
+entrada = input('digite um numero: ') 
+if entrada.isdigit():
+    entrada_int= int(entrada)
+    par_impar = entrada_int %2 == 0
+    par_impar_texto = 'ímpar'
 
-if vel_carro_pass_radar_1:
-    print('Velocidade carro passou do radar 1')
+    if par_impar:
+        par_impar_texto = 'par'
 
-if carro_passou_radar_1:
-    print('Carro passou radar 1')
+        print(f'O número{entrada_int} é {par_impar_texto}')
+else:
+    print('você não digitou um numero inteiro')  
+try:
+    entrada_int = float(entrada)
+    par_impar = entrada_int %2 == 0
+    par_impar_texto = 'ímpar'
 
-if carro_multado_radar_1:
-    print('carro multado em radar 1')
+    if par_impar:
+        par_impar_texto = 'par'
+        
+         print(f'O número {entrada_int} é {par_impar_texto}')
+except:
+    print('Você não digitou um número inteiro')
