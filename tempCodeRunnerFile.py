@@ -1,11 +1,7 @@
-frase = 'o rei correu com predio'
+texto = 'Python'
 
-i = 0
-qtd_apareceu_mais_vezes = 0
-letra_apareceu_mais_vezes = ''
-
-while i < len(frase):
-    letra_atual = frase[i]
-
-    if letra_atual == ' ':
-        i += 1
+novo_texto = ''
+for letra in texto:
+    novo_texto += f'*{letra}'
+    print(letra)
+print(novo_texto + '*')
